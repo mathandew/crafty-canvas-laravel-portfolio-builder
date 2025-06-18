@@ -1,13 +1,18 @@
+# Force PHP detection
 *.php linguist-language=PHP
+*.blade.php linguist-language=PHP
 
+# Normalize line endings
 * text=auto eol=lf
 
+# Set syntax highlighting for various files
 *.blade.php diff=html
 *.css diff=css
 *.html diff=html
 *.md diff=markdown
 *.php diff=php
 
+# Exclude non-source files from GitHub's analysis
 /.github export-ignore
 CHANGELOG.md export-ignore
 .styleci.yml export-ignore
