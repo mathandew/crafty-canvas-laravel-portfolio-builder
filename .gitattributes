@@ -1,18 +1,23 @@
-# Force PHP detection
+# Force GitHub to recognize PHP as the main language
 *.php linguist-language=PHP
 *.blade.php linguist-language=PHP
+
+# Ignore front-end template files from stats
+/resources/** linguist-vendored
+/public/** linguist-vendored
+/node_modules/** linguist-vendored
 
 # Normalize line endings
 * text=auto eol=lf
 
-# Set syntax highlighting for various files
+# Syntax highlighting settings (optional)
 *.blade.php diff=html
 *.css diff=css
 *.html diff=html
 *.md diff=markdown
 *.php diff=php
 
-# Exclude non-source files from GitHub's analysis
+# Exclude from GitHub source tarballs
 /.github export-ignore
 CHANGELOG.md export-ignore
 .styleci.yml export-ignore
